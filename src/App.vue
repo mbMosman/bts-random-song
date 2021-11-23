@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header v-bind:artist="artist" v-bind:logo="logoUrl"/>
+    <SongOfTheDay v-bind:data="songs"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header'
+import SongOfTheDay from './components/SongOfTheDay'
+import btsData from './data/bts-songs.js'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    SongOfTheDay
+  },
+  computed: {
+    logoUrl() {
+      return btsData.logoUrl
+    },
+    artist() {
+      return btsData.artist
+    },
+    songs() {
+      return btsData.songs
+    }
   }
 }
 </script>
 
 <style>
+body {
+  background-color: #966FD6;
+  margin: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
