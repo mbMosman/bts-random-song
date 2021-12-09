@@ -4,9 +4,6 @@
 # Stash any changes
 git stash --include-untracked
 
-# run install
-npm install
-
 # Exit if any subcommand fails.
 set -e
 
@@ -15,6 +12,9 @@ echo "Started deploying"
 # Checkout build branch.
 git branch -D build
 git checkout -b build
+
+# run install
+npm install
 
 # Build site.
 npm run build
