@@ -2,7 +2,7 @@
 
 _Duration: 3 hours_  
 
-To view this application live, please visit: [PROJECT NAME HERE](www.heroku.com)
+To view this application live, please visit: [BTS Song of the Day](https://mbmosman.github.io/bts-random-song/)
 
 
 ## Description
